@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+
+<html>
+		<head>
+		<title>Array in JS</title>
+		<style>
+		p{
+        		color:SeaGreen;
+		font-family:Georgia, "Times New Roman", Times, serif;
+        		}
+        		</style>
+        		</head>
+    	
+       		 <body>
+		<h1> Assignment 2 of Session6(Array in JS)</h1>
+		
+        		<!-- display of array defined-->
+        		<p> Array defined:</p>  
+        		<p id="demo"> </p> 
+        		
+		<!-- display of array after pushing 4 elements-->
+     		 <p> Array after pushing four elements(11,21,31,41)into it:</p> 
+     		 <p id="demo1"> </p> 
+        
+		<!-- display of array after popping up last pushed elements-->
+		<p> Array after popping up the last pushed elments(11,21,31,41):</p> 
+		<p id="demo2"> </p>
+        
+		<!-- display of extracted elements-->
+		<p> Extracted elements from first index to fourth index and list of extracted elements is below:</p>
+		<p id="demo3"> </p>
+        		
+		<!-- display of array after extracting elements-->
+       		<p> Array after extracting elments</p>
+   		<p id="demo4"> </p>
+		
+		<script language="javascript">
+		
+		//array defined 
+		var arr= [15,16,58,90,65,109];
+		document.getElementById("demo").innerHTML=arr;
+		 
+		 //Pushing 4 elements into array
+		arr.push(11,21,31,41);
+		document.getElementById("demo1").innerHTML=arr;
+		
+		//poppin up last pushed emements 
+		arr.pop();
+		arr.pop();
+		arr.pop();
+		arr.pop();
+		document.getElementById("demo2").innerHTML=arr;
+		
+		//Extracting elements from first index to fourth index 
+		var extr= arr.splice(1,4);
+        		document.getElementById("demo3").innerHTML=extr;
+		
+		//Array display after extracting elements 
+		document.getElementById("demo4").innerHTML=arr;
+		
+		//Iteration of array elements by using forEach loop 
+		arr.forEach(function(x){
+    		alert("Iteration of array elements using forEach loop\n" + x);
+		});
+
+		</script>
+
+
+		</body>
+</html>
